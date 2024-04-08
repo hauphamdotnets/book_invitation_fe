@@ -2,8 +2,6 @@ import { memo } from "react";
 
 import { Logo } from "../../../Components/Logo";
 
-// import { Logo } from "@components/Logo";
-
 interface AuthFormContainerProps {
   title: string;
   subtitle: string;

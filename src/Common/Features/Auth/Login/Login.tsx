@@ -1,20 +1,13 @@
-import "./Login.css";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState, memo } from "react";
 import { useTranslation } from "react-i18next";
 import { FormProvider, useForm } from "react-hook-form";
 import { Link, useSearchParams } from "react-router-dom";
 
-// import { AuthFormGeneralError, AuthLoginFormDataType } from "../../../../App/Types/Common";
-
-// import useDocumentTitle from "@hooks/useDocumentTitle";
 import { loginFormSchema } from "../Schemas/LoginFormSchema";
-// import { AUTH_CODE } from "@constants/codeConstant";
-// import { Alert } from "../../../components/Alert";
 import { Button } from "../../../Components/Button";
 import { Input } from "../../../Components/Form";
 import AuthFormContainer from "../Components/AuthFormContainer";
-// import LoginFormFooter from "./Components/LoginFormFooter";
 import { AUTH_CODE } from "../../../../App/Constants/codeConstant";
 import { AUTH_PATH } from "../../../../App/Constants/routeConstant";
 import { Alert } from "../../../Components/Alert";
@@ -24,7 +17,6 @@ import { AuthFormGeneralError, AuthLoginFormDataType } from "../../../../App/Typ
 const Login = () => {
   const { t } = useTranslation("home");
   const [isSubmitting] = useState(false);
-  // const [generalError, setGeneralError] = useState<AuthFormGeneralError | null>(null);
   const [generalError] = useState<AuthFormGeneralError | null>(null);
   const {
     control,

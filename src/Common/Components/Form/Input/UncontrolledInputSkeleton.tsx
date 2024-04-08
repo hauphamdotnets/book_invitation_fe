@@ -54,7 +54,7 @@ const UncontrolledInputSkeleton = (
   if (isFocusing) {
     borderColor = "border-blue-500 z-20";
   } else {
-    borderColor = "border-2";
+    borderColor = "border-gray-100";
   }
 
   if (isFocusing || isAvailableValue) {
