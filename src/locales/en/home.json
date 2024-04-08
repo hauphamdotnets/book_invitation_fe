@@ -1,0 +1,14 @@
+{
+    "titleLogin": "Hi! Welcome back",
+    "loginError": "Login Error!",
+    "loginSubtitle": "Login to your E-Contract account",  
+    "createWithEmail": "You can create a new account with this email to continue.",
+    "email": "Email",
+    "password": "Password",
+    "forgetYourPassword": "Forget Your Password?",
+    "login": "Login",
+    "doNotHaveAccount": "Don't have an account?",
+    "createNow": "Create one"
+    
+  }
+  

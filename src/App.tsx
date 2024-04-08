@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Suspense } from "react";
 import "./App.css";
 import { Provider } from "react-redux";
@@ -9,6 +10,9 @@ import { ErrorBoundary } from "./Common/Features";
 import { LayoutDefault } from "./Common/Layout";
 import CommonRoutes from "./App/Routers/CommonRoutes";
 import { store } from "./App/store";
+import "./locales/config";
+
+const queryClient = new QueryClient();
 
 const App = () => {
   return (
@@ -16,12 +20,14 @@ const App = () => {
       <HelmetProvider>
         <ErrorBoundaryContainer FallbackComponent={ErrorBoundary}>
           <Suspense>
-            <BrowserRouter>
-              <LayoutDefault>
-                <CommonRoutes />
-              </LayoutDefault>
-              {/* <AxiosProvider /> */}
-            </BrowserRouter>
+            <QueryClientProvider client={queryClient}>
+              <BrowserRouter>
+                <LayoutDefault>
+                  <CommonRoutes />
+                </LayoutDefault>
+                {/* <AxiosProvider /> */}
+              </BrowserRouter>
+            </QueryClientProvider>
           </Suspense>
         </ErrorBoundaryContainer>
       </HelmetProvider>
